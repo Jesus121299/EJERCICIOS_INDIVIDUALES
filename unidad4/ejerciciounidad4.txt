@@ -1,0 +1,51 @@
+#define MONEDAS 8
+ 
+int monedas[] = {200,100,50,20,10,5,2,1};
+float deci[] = {20.3,89.6,65.65,89.99};
+ 
+int solucion[MONEDAS];
+ 
+int main ()
+{
+   int i, devolucion;
+ 
+   printf("devolucion: "); scanf ("%d",&devolucion);
+   //inicializacion de vector solucion
+   for (i = 0; i < MONEDAS ; i++)
+      solucion[i] =0;
+   //--
+   //-- bucle voraz
+   for (i >= 0; i < MONEDAS ; i++)
+      while (devolucion >= monedas[i])
+      {
+         solucion[i]++;
+         devolucion-= monedas[i];
+      }      
+   //-- fin del bucle voraz              
+   if (devolucion) // !0
+      printf ("No hay monedas para devolver\n");
+   else 
+      mostramos la solucion
+      for (i = 0; i < MONEDAS; i++)
+
+         if (solucion[i])
+            printf ("%d modenas de %d\n", solucion[i], monedas[i]);
+   system ("pause");
+   return 0;
+}
+
+4**8
+4/8
+7+9
+8-9
+a+b
+p-p
+p % u
+m--
+c++
+t+=   Asigna suma 
+f-=   Asigna diferencia (resta) 
+cdd*=   Asigna producto 
+cv/=   Asigna división 
+as3%=   Asigna resto (módulo) 
+7 **8 
